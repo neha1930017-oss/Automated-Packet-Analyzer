@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-08-26T20:44:07.407781",
+  "summary": {
+    "total_packets": 12,
+    "failed_packets": 6,
+    "success_rate": 50.0,
+    "total_findings": 0
+  },
+  "findings": [
+    {
+      "type": "MTU_VIOLATION",
+      "severity": "HIGH",
+      "details": "Packet size 9034 exceeds MTU 1500",
+      "packet_summary": "IP:10.0.0.1->10.0.0.2"
+    },
+    {
+      "type": "SUSPICIOUS_FLAGS",
+      "severity": "MEDIUM",
+      "details": "NULL scan detected (no flags set)",
+      "packet_summary": "IP:192.168.1.5->192.168.1.6"
+    },
+    {
+      "type": "SUSPICIOUS_FLAGS",
+      "severity": "MEDIUM",
+      "details": "XMAS scan detected (FIN+URG+PSH)",
+      "packet_summary": "IP:192.168.1.7->192.168.1.8"
+    }
+  ],
+  "packets": [
+    {
+      "src_ip": "192.168.1.1",
+      "dst_ip": "192.168.1.2",
+      "protocol": "Ethernet, IP, TCP",
+      "size": 54,
+      "valid": true,
+      "findings": []
+    },
+    {
+      "src_ip": "192.168.1.3",
+      "dst_ip": "192.168.1.4",
+      "protocol": "Ethernet, IP, UDP",
+      "size": 42,
+      "valid": true,
+      "findings": []
+    },
+    {
+      "src_ip": "10.0.0.1",
+      "dst_ip": "10.0.0.2",
+      "protocol": "Ethernet, IP",
+      "size": 9034,
+      "valid": false,
+      "findings": []
+    },
+    {
+      "src_ip": "192.168.1.5",
+      "dst_ip": "192.168.1.6",
+      "protocol": "Ethernet, IP, TCP",
+      "size": 54,
+      "valid": false,
+      "findings": []
+    },
+    {
+      "src_ip": "192.168.1.7",
+      "dst_ip": "192.168.1.8",
+      "protocol": "Ethernet, IP, TCP",
+      "size": 54,
+      "valid": false,
+      "findings": []
+    },
+    {
+      "src_ip": "192.168.1.9",
+      "dst_ip": "192.168.1.10",
+      "protocol": "Ethernet, IP, ICMP",
+      "size": 42,
+      "valid": true,
+      "findings": []
+    }
+  ]
+}

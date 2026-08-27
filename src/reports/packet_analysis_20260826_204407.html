@@ -1,0 +1,148 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Packet Analysis Report</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+                .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                h1, h2, h3 { color: #333; }
+                .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+                .summary-card { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+                .summary-card .number { font-size: 28px; font-weight: bold; color: #007bff; }
+                .summary-card .label { color: #666; margin-top: 5px; }
+                .finding { border-left: 4px solid #dc3545; padding: 10px; margin: 10px 0; background: #fff5f5; }
+                .finding.high { border-color: #dc3545; background: #fff5f5; }
+                .finding.medium { border-color: #ffc107; background: #fffbf0; }
+                .finding.low { border-color: #17a2b8; background: #f0f9ff; }
+                table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+                th { background: #f8f9fa; }
+                .protocol-badge { display: inline-block; padding: 3px 8px; background: #007bff; color: white; border-radius: 12px; font-size: 12px; }
+                .timestamp { color: #666; font-size: 14px; }
+                .pass { color: #28a745; font-weight: bold; }
+                .fail { color: #dc3545; font-weight: bold; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Network Packet Analysis Report</h1>
+                <p class="timestamp">Generated: 2026-08-26 20:44:07</p>
+                
+                <h2>Summary</h2>
+                <div class="summary">
+                    <div class="summary-card">
+                        <div class="number">12</div>
+                        <div class="label">Total Packets</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">6</div>
+                        <div class="label">Anomalies Found</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">50.0%</div>
+                        <div class="label">Pass Rate</div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="number">0</div>
+                        <div class="label">Total Findings</div>
+                    </div>
+                </div>
+                
+                <h2>Findings Details</h2>
+                
+            <div class="finding high">
+                <strong>MTU_VIOLATION</strong> 
+                <span class="protocol-badge">HIGH</span>
+                <p>Packet size 9034 exceeds MTU 1500</p>
+                <span style="color: #666; font-size: 12px;">Packet: IP:10.0.0.1->10.0.0.2</span>
+            </div>
+            
+            <div class="finding medium">
+                <strong>SUSPICIOUS_FLAGS</strong> 
+                <span class="protocol-badge">MEDIUM</span>
+                <p>NULL scan detected (no flags set)</p>
+                <span style="color: #666; font-size: 12px;">Packet: IP:192.168.1.5->192.168.1.6</span>
+            </div>
+            
+            <div class="finding medium">
+                <strong>SUSPICIOUS_FLAGS</strong> 
+                <span class="protocol-badge">MEDIUM</span>
+                <p>XMAS scan detected (FIN+URG+PSH)</p>
+                <span style="color: #666; font-size: 12px;">Packet: IP:192.168.1.7->192.168.1.8</span>
+            </div>
+            
+                
+                <h2>Packet Details</h2>
+                
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Source IP</th>
+                    <th>Destination IP</th>
+                    <th>Protocol</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+        
+            <tr>
+                <td>1</td>
+                <td>192.168.1.1</td>
+                <td>192.168.1.2</td>
+                <td><span class="protocol-badge">Ethernet, IP, TCP</span></td>
+                <td>54 bytes</td>
+                <td><span class="pass">[PASS]</span></td>
+            </tr>
+            
+            <tr>
+                <td>2</td>
+                <td>192.168.1.3</td>
+                <td>192.168.1.4</td>
+                <td><span class="protocol-badge">Ethernet, IP, UDP</span></td>
+                <td>42 bytes</td>
+                <td><span class="pass">[PASS]</span></td>
+            </tr>
+            
+            <tr>
+                <td>3</td>
+                <td>10.0.0.1</td>
+                <td>10.0.0.2</td>
+                <td><span class="protocol-badge">Ethernet, IP</span></td>
+                <td>9034 bytes</td>
+                <td><span class="fail">[FAIL]</span></td>
+            </tr>
+            
+            <tr>
+                <td>4</td>
+                <td>192.168.1.5</td>
+                <td>192.168.1.6</td>
+                <td><span class="protocol-badge">Ethernet, IP, TCP</span></td>
+                <td>54 bytes</td>
+                <td><span class="fail">[FAIL]</span></td>
+            </tr>
+            
+            <tr>
+                <td>5</td>
+                <td>192.168.1.7</td>
+                <td>192.168.1.8</td>
+                <td><span class="protocol-badge">Ethernet, IP, TCP</span></td>
+                <td>54 bytes</td>
+                <td><span class="fail">[FAIL]</span></td>
+            </tr>
+            
+            <tr>
+                <td>6</td>
+                <td>192.168.1.9</td>
+                <td>192.168.1.10</td>
+                <td><span class="protocol-badge">Ethernet, IP, ICMP</span></td>
+                <td>42 bytes</td>
+                <td><span class="pass">[PASS]</span></td>
+            </tr>
+            </tbody></table>
+            </div>
+        </body>
+        </html>
+        
