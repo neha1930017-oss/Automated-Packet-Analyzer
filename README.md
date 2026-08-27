@@ -1,3 +1,4 @@
+markdown
 # Automated Network Packet Analyzer & Tester
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
@@ -67,6 +68,8 @@ Automated-Packet-Analyzer/
 ├── requirements.txt # Dependencies
 └── README.md # Documentation
 
+text
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -85,6 +88,7 @@ cd Automated-Packet-Analyzer
 # Install dependencies
 pip install -r requirements.txt
 Run Tests
+bash
 # Navigate to tests directory
 cd tests
 
@@ -94,10 +98,13 @@ python test_validator.py
 # Run parser tests
 python test_parser.py
 Expected Output:
+
+text
 ----------------------------------------------------------------------
 Ran 6 tests in 0.010s
 OK
 Run Analysis
+bash
 # Navigate to src directory
 cd src
 
@@ -107,6 +114,7 @@ python test_simulated.py
 # Run with real packet capture (requires admin)
 python main.py
 📊 Sample Output
+text
 ==================================================
 📊 ANALYSIS COMPLETE
 ==================================================
@@ -123,7 +131,8 @@ python main.py
   2. SUSPICIOUS_FLAGS - MEDIUM
      NULL scan detected (no flags set)
   3. SUSPICIOUS_FLAGS - MEDIUM
-     XMAS scan detected (FIN+URG+PSH)🎯 Why This Project Matters for Testing Roles
+     XMAS scan detected (FIN+URG+PSH)
+🎯 Why This Project Matters for Testing Roles
 This project demonstrates the exact skills recruiters want:
 
 Skill Demonstrated	How
